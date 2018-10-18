@@ -64,7 +64,7 @@
   </dependencies>
 
   <build>
-    <finalName>mrone-${project.version}</finalName>
+    <finalName>mrtwo-${project.version}</finalName>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
