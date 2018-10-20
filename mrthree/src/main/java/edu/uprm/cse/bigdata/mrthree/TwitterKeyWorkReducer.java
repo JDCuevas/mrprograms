@@ -19,6 +19,9 @@ public class TwitterKeyWorkReducer extends Reducer<Text, IntWritable, Text, IntW
         for (IntWritable value : values){
             count += value.get();
         }
-        context.write(key, new IntWritable(count));
+
+	if(count == 1){
+            context.write(key, new IntWritable(count));
+	}
     }
 }

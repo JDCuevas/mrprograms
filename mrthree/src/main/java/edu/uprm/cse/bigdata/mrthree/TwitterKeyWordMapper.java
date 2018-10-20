@@ -24,9 +24,8 @@ public class TwitterKeyWordMapper extends Mapper<LongWritable, Text, Text, IntWr
         try {
             Status status = TwitterObjectFactory.createStatus(rawTweet);
 
-	    if(status.isRetweet()) {
-                context.write(new Text("# of Retweets: "), new IntWritable(1));
-	    }   
+            context.write(new Text(status.getUser().getScreenName()), new IntWritable(1));
+	  
         }
         catch(TwitterException e){
 
